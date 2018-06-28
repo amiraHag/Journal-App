@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1014382694248",
+    "firebase_url": "https://journalapp-eba3f.firebaseio.com",
+    "project_id": "journalapp-eba3f",
+    "storage_bucket": "journalapp-eba3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014382694248:android:8910afb0cb59d336",
+        "android_client_info": {
+          "package_name": "com.example.android.journalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014382694248-s0d1e9v807o782561smfl0k61b3eem70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.journalapp",
+            "certificate_hash": "dd419f5ce8c7963d85a5476bbf9b798c50389fa5"
+          }
+        },
+        {
+          "client_id": "1014382694248-6ci4hp3ppku8i1f4sqg7lpll3r8trpdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9GZMt63VyHsmpvrn_IUi4Ki28EYvn898"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014382694248-6ci4hp3ppku8i1f4sqg7lpll3r8trpdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014382694248:android:875826f41b75eba4",
+        "android_client_info": {
+          "package_name": "com.example.android.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014382694248-c2lk22lrvj5i29lpl30ppsmdo6n397a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.myapplication",
+            "certificate_hash": "dd419f5ce8c7963d85a5476bbf9b798c50389fa5"
+          }
+        },
+        {
+          "client_id": "1014382694248-6ci4hp3ppku8i1f4sqg7lpll3r8trpdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9GZMt63VyHsmpvrn_IUi4Ki28EYvn898"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014382694248-6ci4hp3ppku8i1f4sqg7lpll3r8trpdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
