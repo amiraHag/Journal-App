@@ -103,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
     // [START account activity]
     public void startAccountActivity() {
         finish();
-        startActivity(new Intent(this, AccountActivity.class));
+     //   startActivity(new Intent(this, AccountActivity.class));
+        startActivity(new Intent(this, PostActivity.class));
     }
     // [END account activity]
 
