@@ -1,9 +1,11 @@
 package com.example.android.journalapp.view;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.android.journalapp.R;
 import com.example.android.journalapp.model.Post;
@@ -17,20 +19,21 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllPostsActivity extends AppCompatActivity {
-
+public class AllPostsActivity extends BaseActivity {
 
 
     RecyclerView recyclerViewPosts;
 
 
-    //a list to store all the artist from firebase database
+    //a list to store all the posts from firebase database
     List<Post> posts;
 
 
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
+
+    private FloatingActionButton mAddPostButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +48,26 @@ public class AllPostsActivity extends AppCompatActivity {
         //list to store posts
         posts = new ArrayList<>();
 
-        recyclerViewPosts = (RecyclerView) findViewById(R.id.list_View_Posts);
+        recyclerViewPosts = (RecyclerView) findViewById(R.id.list_view_posts);
         recyclerViewPosts.setLayoutManager(new LinearLayoutManager(this));
+
+        mAddPostButton = findViewById(R.id.button_add_new_post);
+
+        mAddPostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startAddPostActivity();
+            }
+        });
 
 
     }
 
+    public void startAddPostActivity() {
+        finish();
+
+        startActivity(new Intent(this, PostActivity.class));
+    }
 
     @Override
     protected void onStart() {
@@ -66,9 +83,9 @@ public class AllPostsActivity extends AppCompatActivity {
 
                 //iterating through all the nodes
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    //getting artist
+                    //getting post
                     Post post = postSnapshot.getValue(Post.class);
-                    //adding artist to the list
+                    //adding post to the list
                     posts.add(post);
                 }
 

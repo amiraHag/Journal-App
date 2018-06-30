@@ -2,9 +2,9 @@ package com.example.android.journalapp.model;
 
 public class Post {
 
-   private String postId;
-   private String postTitle;
-   private String postDescription;
+    private String postId;
+    private String postTitle;
+    private String postDescription;
 
 
     public Post() {
@@ -17,27 +17,27 @@ public class Post {
         this.postDescription = postDescription;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
-    }
-
-    public void setPostTitle(String postTitle) {
-        this.postTitle = postTitle;
-    }
-
-    public void setPostDescription(String postDescription) {
-        this.postDescription = postDescription;
-    }
-
     public String getPostId() {
         return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
     }
 
     public String getPostTitle() {
         return postTitle;
     }
 
+    public void setPostTitle(String postTitle) {
+        this.postTitle = postTitle;
+    }
+
     public String getPostDescription() {
         return postDescription;
+    }
+
+    public void setPostDescription(String postDescription) {
+        this.postDescription = postDescription;
     }
 }

@@ -21,7 +21,8 @@
         <activity android:name=".view.AccountActivity" />
         <activity android:name=".view.PostActivity" />
         <activity android:name=".view.AllPostsActivity" />
-        <activity android:name=".view.DetaildedPostActivity"></activity>
+        <activity android:name=".view.DetaildedPostActivity" />
+        <activity android:name=".view.BaseActivity"></activity>
     </application>
 
 </manifest>

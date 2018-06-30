@@ -28,24 +28,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String TAG = "GoogleSignIn";
-    private static final int RC_SIGN_IN =  1111;
+    private static final int RC_SIGN_IN = 1111;
     // Create a GoogleSignInClient variable.
-    GoogleSignInClient mGoogleSignInClient ;
-
+    GoogleSignInClient mGoogleSignInClient;
+    // Set the dimensions of the sign-in button.
+    SignInButton signInButton;
+    // [END declare_auth]
     // [START declare_auth]
     private FirebaseAuth mAuth;
-    // [END declare_auth]
-
-
-    // Set the dimensions of the sign-in button.
-    SignInButton signInButton ;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         // Configure Google Sign In
@@ -60,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
-        signInButton = findViewById(R.id.sign_in_button);
+        signInButton = findViewById(R.id.button_sign_in);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
-        findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_sign_in).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (view.getId()) {
-                    case R.id.sign_in_button:
+                    case R.id.button_sign_in:
                         signIn();
                         break;
                     // ...
@@ -81,16 +76,16 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(checkUser(currentUser) ){
-            startAccountActivity();
+        if (checkUser(currentUser)) {
+            startAllPostsActivity();
         }
     }
     // [END on_start_check_user]
 
     // [START check login user]
-    public boolean checkUser(FirebaseUser user){
+    public boolean checkUser(FirebaseUser user) {
 
-        if (user != null){
+        if (user != null) {
             return true;
         }
         return false;
@@ -99,13 +94,12 @@ public class MainActivity extends AppCompatActivity {
     // [END check login user]
 
     // [START account activity]
-    public void startAccountActivity() {
+    public void startAllPostsActivity() {
         finish();
-     //   startActivity(new Intent(this, AccountActivity.class));
-        startActivity(new Intent(this, PostActivity.class));
+
+        startActivity(new Intent(this, AllPostsActivity.class));
     }
     // [END account activity]
-
 
 
     // [START signin]
@@ -114,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
     // [END signin]
-
 
 
     // [START onactivityresult]
@@ -153,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startAccountActivity();
+                            startAllPostsActivity();
 
                         } else {
                             // If sign in fails, display a message to the user.
@@ -165,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
     // [END auth_with_google]
-
 
 
 }

@@ -3,43 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AccountActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".view.AccountActivity">
+
     <ImageView
 
-        android:id="@+id/userAccountPhoto"
+        android:id="@+id/image_user_account_photo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        />
+        android:layout_marginTop="30dp" />
 
     <TextView
-        android:id="@+id/userAccountName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="User Name"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="20dp"
-
-        android:paddingBottom="30dp"/>
-    <TextView
-        android:id="@+id/userAccountEmail"
+        android:id="@+id/text_user_account_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="User Email"
+        android:paddingBottom="30dp"
         android:paddingLeft="20dp"
-        android:paddingBottom="30dp"/>
+        android:text="@string/account_user_name" />
+
+    <TextView
+        android:id="@+id/text_user_account_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        android:paddingLeft="20dp"
+        android:text="@string/account_user_email" />
 
     <Button
-        android:id="@+id/signoutButton"
-        android:layout_width="match_parent"
+        android:id="@+id/button_signout"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Sign Out"
+        android:layout_gravity="center_horizontal"
         android:background="@color/colorPrimaryDark"
+        android:text="@string/button_signout_title"
         android:textColor="#fff"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
 </LinearLayout>

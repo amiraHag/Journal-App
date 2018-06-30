@@ -1,7 +1,6 @@
 package com.example.android.journalapp.view;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,12 +19,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class AccountActivity extends AppCompatActivity {
+public class AccountActivity extends BaseActivity {
 
 
     //Views
     ImageView userAccountPhoto;
-    TextView  userNameTextView,  userEmailTextView;
+    TextView userNameTextView, userEmailTextView;
     Button signoutButton;
 
     //Firebase
@@ -38,11 +37,11 @@ public class AccountActivity extends AppCompatActivity {
 
 
         //Initialize the views
-        userAccountPhoto = findViewById(R.id.userAccountPhoto);
+        userAccountPhoto = findViewById(R.id.image_user_account_photo);
 
-        userNameTextView = (TextView) findViewById(R.id.userAccountName);
-        userEmailTextView = (TextView) findViewById(R.id.userAccountEmail);
-        signoutButton = (Button) findViewById(R.id.signoutButton);
+        userNameTextView = (TextView) findViewById(R.id.text_user_account_name);
+        userEmailTextView = (TextView) findViewById(R.id.text_user_account_email);
+        signoutButton = (Button) findViewById(R.id.button_signout);
 
 
         //Get instance for firebase auth
@@ -62,46 +61,26 @@ public class AccountActivity extends AppCompatActivity {
         signoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userSignout(currentUser);
+                userSignOut(currentUser);
             }
         });
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message2");
 
-        myRef.setValue("Hello, World!2");
-
-// Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("message", "Value is: " + value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("message", "Failed to read value.", error.toException());
-            }
-        });
 
     }
-
 
 
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(!checkUser(currentUser) ){
+        if (!checkUser(currentUser)) {
             startLoginActivity();
 
         }
 
 
     }
+
     // [START login activity]
     public void startLoginActivity() {
         finish();
@@ -111,9 +90,9 @@ public class AccountActivity extends AppCompatActivity {
 
 
     // [START check login user]
-    public boolean checkUser(FirebaseUser user){
+    public boolean checkUser(FirebaseUser user) {
 
-        if (user != null){
+        if (user != null) {
             return true;
         }
         return false;
@@ -122,9 +101,9 @@ public class AccountActivity extends AppCompatActivity {
     // [END check login user]
 
     // [START user sign out]
-    public void userSignout(FirebaseUser user){
+    public void userSignOut(FirebaseUser user) {
 
-        if (user != null){
+        if (user != null) {
             FirebaseAuth.getInstance().signOut();
             startLoginActivity();
 
@@ -132,6 +111,7 @@ public class AccountActivity extends AppCompatActivity {
         }
 
     }
+    // [END sign out]
 
 
 }

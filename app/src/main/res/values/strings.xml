@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Journal App</string>
+    <string name="menu_item_profile">Profile</string>
+    <string name="menu_item_add_post">Add Post</string>
+    <string name="menu_item_all_post">All Posts</string>
+    <string name="button_signout_title">Sign Out</string>
+    <string name="account_user_name">User Name</string>
+    <string name="account_user_email">User Email</string>
+    <string name="post_title">Post Title</string>
+    <string name="post_description">Post Description</string>
+    <string name="post_modify_button">Modify Post</string>
+    <string name="post_update_button">Update</string>
+    <string name="post_delete_button">Delete</string>
+    <string name="post_modify_title">Please write the new title here</string>
+    <string name="post_modify_description">Please write the new description here</string>
+
 </resources>

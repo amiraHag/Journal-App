@@ -2,7 +2,6 @@ package com.example.android.journalapp.view;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,11 +10,10 @@ import android.widget.Toast;
 
 import com.example.android.journalapp.R;
 import com.example.android.journalapp.model.Post;
-import com.example.android.journalapp.view.AllPostsActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class PostActivity extends AppCompatActivity {
+public class PostActivity extends BaseActivity {
 
     // [START declare_static_variables]
     private static final String TAG = "NewPostActivity";
@@ -40,18 +38,17 @@ public class PostActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference("posts");
         // [END initialize_database_ref]
 
-        mTitleField = findViewById(R.id.field_title);
-        mBodyField = findViewById(R.id.field_body);
-        mSubmitButton = findViewById(R.id.submit_new_post);
+        mTitleField = findViewById(R.id.et_post_title);
+        mBodyField = findViewById(R.id.et_post_body);
+        mSubmitButton = findViewById(R.id.button_submit_post);
 
-        mSubmitButton.setOnClickListener(new View.OnClickListener(){
+        mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               submitPost();
+                submitPost();
             }
         });
     }
-
 
 
     // [START Submit function]

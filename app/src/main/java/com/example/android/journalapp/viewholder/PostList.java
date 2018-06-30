@@ -19,10 +19,9 @@ import java.util.List;
 public class PostList extends RecyclerView.Adapter<PostList.ViewHolder> {
     //Constants to pass the post id, title, description to another activity
 
-    public static final String POST_ID = "postid";
-    public static final String POST_NAME = "postname";
-    public static final String POST_BODY = "postbody";
-
+    public static final String POST_ID = "POST_ID";
+    public static final String POST_NAME = "POST_NAME";
+    public static final String POST_BODY = "POST_BODY";
 
 
     private Context context;
@@ -55,13 +54,13 @@ public class PostList extends RecyclerView.Adapter<PostList.ViewHolder> {
         holder.parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getting the selected artist
+                //getting the selected post
                 Post post = posts.get(position);
 
                 //creating an intent
                 Intent intent = new Intent(context, DetaildedPostActivity.class);
 
-                //putting artist name and id to intent
+                //putting post name and id to intent
                 intent.putExtra(POST_ID, post.getPostId());
                 intent.putExtra(POST_NAME, post.getPostTitle());
                 intent.putExtra(POST_BODY, post.getPostDescription());
@@ -73,7 +72,6 @@ public class PostList extends RecyclerView.Adapter<PostList.ViewHolder> {
 
 
     }
-
 
 
     @Override
@@ -92,9 +90,9 @@ public class PostList extends RecyclerView.Adapter<PostList.ViewHolder> {
             super(view);
             this.parentView = view;
             this.textViewTitle = (TextView) view
-                    .findViewById(R.id.post_title);
+                    .findViewById(R.id.text_post_title);
             this.textViewBody = (TextView) view
-                    .findViewById(R.id.post_body);
+                    .findViewById(R.id.text_post_body);
 
         }
     }
