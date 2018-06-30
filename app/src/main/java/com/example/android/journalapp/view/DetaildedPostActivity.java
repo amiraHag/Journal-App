@@ -1,4 +1,4 @@
-package com.example.android.journalapp;
+package com.example.android.journalapp.view;
 
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.journalapp.R;
+import com.example.android.journalapp.model.Post;
+import com.example.android.journalapp.view.AllPostsActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

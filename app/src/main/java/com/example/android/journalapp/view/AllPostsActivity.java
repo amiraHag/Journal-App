@@ -1,14 +1,13 @@
-package com.example.android.journalapp;
+package com.example.android.journalapp.view;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
+import com.example.android.journalapp.R;
+import com.example.android.journalapp.model.Post;
+import com.example.android.journalapp.viewholder.PostList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

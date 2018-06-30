@@ -6,4 +6,4 @@ android:id="@+id/list_View_Posts"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:divider="@null"
-tools:context=".AllPostsActivity" />
+tools:context=".view.AllPostsActivity" />
