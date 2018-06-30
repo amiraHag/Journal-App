@@ -40,9 +40,9 @@ public class DetaildedPostActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        final String id = intent.getStringExtra(AllPostsActivity.POST_ID);
-        final String title = intent.getStringExtra(AllPostsActivity.POST_NAME);
-        final String body = intent.getStringExtra(AllPostsActivity.POST_BODY);
+        final String id = intent.getStringExtra("postid");
+        final String title = intent.getStringExtra("postname");
+        final String body = intent.getStringExtra("postbody");
 
         mTitleDetailPost.setText(title);
         mBodyDetailPost.setText(body);

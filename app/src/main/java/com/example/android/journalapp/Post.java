@@ -17,6 +17,18 @@ public class Post {
         this.postDescription = postDescription;
     }
 
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    public void setPostTitle(String postTitle) {
+        this.postTitle = postTitle;
+    }
+
+    public void setPostDescription(String postDescription) {
+        this.postDescription = postDescription;
+    }
+
     public String getPostId() {
         return postId;
     }
