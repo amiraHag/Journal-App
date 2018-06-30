@@ -1,7 +1,10 @@
 package com.example.android.journalapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,6 +17,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AllPostsActivity extends AppCompatActivity {
+
+
+    //Constants to pass the post id, title, description to another activity
+
+    public static final String POST_ID = "postid";
+    public static final String POST_NAME = "postname";
+    public static final String POST_BODY = "postbody";
 
 ListView listViewPosts;
 
@@ -39,6 +49,25 @@ ListView listViewPosts;
         posts = new ArrayList<>();
 
         listViewPosts = (ListView) findViewById(R.id.list_View_Posts);
+
+        listViewPosts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //getting the selected artist
+                Post post = posts.get(i);
+
+                //creating an intent
+                Intent intent = new Intent(getApplicationContext(), DetaildedPostActivity.class);
+
+                //putting artist name and id to intent
+                intent.putExtra(POST_ID, post.getPostId());
+                intent.putExtra(POST_NAME, post.getPostTitle());
+                intent.putExtra(POST_BODY, post.getPostDescription());
+
+                //starting the activity with intent
+                startActivity(intent);
+            }
+        });
     }
 
 

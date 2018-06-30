@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetaildedPostActivity"
+        android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/details_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post Title"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="30dp"/>
+        <TextView
+            android:id="@+id/details_post_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Post Description"
+            android:paddingLeft="20dp"
+            android:paddingBottom="30dp"/>
+
+        <Button
+            android:id="@+id/edit_details_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modify Post"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
