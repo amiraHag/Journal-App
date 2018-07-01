@@ -15,7 +15,7 @@ This is journal application where in users can pen down their thoughts and feeli
 
 
 # Screenshots:
-<img src="screen shots/Main Screen.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/add post.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/all posts.png" width="100" style="display: inline-block" alt="Screenshot"/> 
+<img src="screen shots/Main Screen.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/add-post.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/all-posts.png" width="100" style="display: inline-block" alt="Screenshot"/> 
 <img src="screen shots/menu.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/post.png" width="100" style="display: inline-block" alt="Screenshot"/> <img src="screen shots/uodate and delete post.png" width="100" style="display: inline-block" alt="Screenshot"/> 
 
 
@@ -75,7 +75,7 @@ https://github.com/amiraHag/Journal-App/tree/master/app/src/test/java/com/exampl
 
 # Deployment
 
-Download the apk from https://github.com/amiraHag/Journal-App/blob/master/apk/debug/app-debug.apk
+Download the apk from https://github.com/amiraHag/Journal-App/blob/master/apk/app-debug.apk
 
 
 # Support
